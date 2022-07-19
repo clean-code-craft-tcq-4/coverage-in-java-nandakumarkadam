@@ -1,12 +1,12 @@
-package TypewiseAlert;
+package typewiseAlert;
+
+import typewiseAlert.Constants.AlertTarget;
+import typewiseAlert.Constants.BreachType;
+import typewiseAlert.Constants.CoolingType;
 
 public class TypewiseAlert 
 {
-    public enum BreachType {
-      NORMAL,
-      TOO_LOW,
-      TOO_HIGH
-    };
+   
     public static BreachType inferBreach(double value, double lowerLimit, double upperLimit) {
       if(value < lowerLimit) {
         return BreachType.TOO_LOW;
@@ -16,11 +16,7 @@ public class TypewiseAlert
       }
       return BreachType.NORMAL;
     }
-    public enum CoolingType {
-      PASSIVE_COOLING,
-      HI_ACTIVE_COOLING,
-      MED_ACTIVE_COOLING
-    };
+  
     public static BreachType classifyTemperatureBreach(
         CoolingType coolingType, double temperatureInC) {
       int lowerLimit = 0;
@@ -41,10 +37,7 @@ public class TypewiseAlert
       }
       return inferBreach(temperatureInC, lowerLimit, upperLimit);
     }
-    public enum AlertTarget{
-      TO_CONTROLLER,
-      TO_EMAIL
-    };
+    
     public class BatteryCharacter {
       public CoolingType coolingType;
       public String brand;

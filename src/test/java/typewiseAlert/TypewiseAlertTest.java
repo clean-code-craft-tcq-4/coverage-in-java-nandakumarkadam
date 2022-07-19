@@ -1,8 +1,10 @@
-package TypewiseAlert;
+package typewiseAlert;
 
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
+
+import typewiseAlert.Constants.BreachType;
 
 public class TypewiseAlertTest 
 {
@@ -10,6 +12,6 @@ public class TypewiseAlertTest
     public void infersBreachAsPerLimits()
     {
       assertTrue(TypewiseAlert.inferBreach(12, 20, 30) ==
-        TypewiseAlert.BreachType.TOO_LOW);
+        BreachType.TOO_LOW);
     }
 }
