@@ -1,5 +1,7 @@
 package typewiseAlert.Constants;
 
 public enum CoolingType {
-	PASSIVE_COOLING, HI_ACTIVE_COOLING, MED_ACTIVE_COOLING
+	PASSIVE_COOLING,
+	HI_ACTIVE_COOLING,
+	MED_ACTIVE_COOLING
 };

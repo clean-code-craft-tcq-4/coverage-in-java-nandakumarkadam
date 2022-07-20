@@ -1,5 +1,7 @@
 package sendAlertImpl;
 
+import java.util.EnumMap;
+
 import sendAlert.SendAlert;
 import typewiseAlert.Constants.BreachType;
 
@@ -28,6 +30,10 @@ public class SendAlertImpl implements SendAlert {
 		case NORMAL:
 			break;
 		}
+		
+		EnumMap<BreachType, String> tempMap = new EnumMap<BreachType, String>(BreachType.class);
+		tempMap.put(BreachType.TOO_LOW,"To: %s\\n\", recepient+ Hi, the temperature is too low\\n" );
+				
 	}
 
 }
