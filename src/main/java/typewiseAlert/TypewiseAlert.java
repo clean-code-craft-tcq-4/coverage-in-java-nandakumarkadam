@@ -17,10 +17,11 @@ public class TypewiseAlert {
 	public SendAlert sendAlert;
 	public CoolingType coolingType;
 	public String brand;
+	public BreachType breachType;
 
 	public void checkAndAlert(AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC) {
 
-		BreachType breachType = temperature.classifyTemperatureBreach(batteryChar.coolingType, temperatureInC);
+		breachType = temperature.classifyTemperatureBreach(batteryChar.coolingType, temperatureInC);
 
 		switch (alertTarget) {
 		case TO_CONTROLLER:
@@ -30,7 +31,6 @@ public class TypewiseAlert {
 			sendAlert.sendToEmail(breachType);
 			break;
 		}
-		EnumMap<AlertTarget, SendAlert> alertMap = new EnumMap<>(AlertTarget.class);
-		alertMap.put(TO_CONTROLLER, sendAlert)
+
 	}
 }
