@@ -2,8 +2,8 @@ package sendAlertImpl;
 
 import java.util.EnumMap;
 
+import batteryCharacter.BreachType;
 import sendAlert.SendAlert;
-import typewiseAlert.Constants.BreachType;
 
 public class SendAlertImpl implements SendAlert {
 

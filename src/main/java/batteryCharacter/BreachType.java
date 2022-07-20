@@ -1,4 +1,4 @@
-package typewiseAlert.Constants;
+package batteryCharacter;
 
 public enum BreachType {
 	NORMAL, TOO_LOW, TOO_HIGH;

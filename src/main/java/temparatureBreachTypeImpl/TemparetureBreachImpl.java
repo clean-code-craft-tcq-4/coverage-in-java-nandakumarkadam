@@ -1,15 +1,10 @@
 package temparatureBreachTypeImpl;
 
+import batteryCharacter.BreachType;
+import batteryCharacter.CoolingType;
 import temparatureBreachType.TemparetureBreach;
-import typewiseAlert.Constants.BreachType;
-import typewiseAlert.Constants.CoolingType;
 
 public class TemparetureBreachImpl implements TemparetureBreach {
-	public static void main(String[] args) {
-		TemparetureBreach ib = new TemparetureBreachImpl() ;
-		ib.inferBreach(12, 20, 30);
-	}
-
 
 	@Override
 	public BreachType inferBreach(double value, double lowerLimit, double upperLimit) {
@@ -24,7 +19,7 @@ public class TemparetureBreachImpl implements TemparetureBreach {
 
 	@Override
 	public BreachType classifyTemperatureBreach(CoolingType coolingType, double temperatureInC) {
-	
+
 		return inferBreach(temperatureInC, coolingType.getLowerLimit(), coolingType.getUpperLimit());
 	}
 }

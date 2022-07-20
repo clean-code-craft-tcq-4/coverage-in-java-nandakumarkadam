@@ -1,7 +1,7 @@
 package temparatureBreachType;
 
-import typewiseAlert.Constants.BreachType;
-import typewiseAlert.Constants.CoolingType;
+import batteryCharacter.BreachType;
+import batteryCharacter.CoolingType;
 
 public interface TemparetureBreach {
 

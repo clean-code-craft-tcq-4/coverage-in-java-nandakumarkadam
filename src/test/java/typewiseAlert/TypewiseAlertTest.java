@@ -4,14 +4,17 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import batteryCharacter.AlertTarget;
+import batteryCharacter.BatteryCharacter;
+import batteryCharacter.BreachType;
+import batteryCharacter.CoolingType;
 import temparatureBreachType.TemparetureBreach;
 import temparatureBreachTypeImpl.TemparetureBreachImpl;
-import typewiseAlert.Constants.AlertTarget;
-import typewiseAlert.Constants.BreachType;
-import typewiseAlert.Constants.CoolingType;
+import typewiseAlertImpl.TypewiseAlertImpl;
 
 public class TypewiseAlertTest {
 	public TemparetureBreach tempBreach = new TemparetureBreachImpl();
+	TypewiseAlert alert = new TypewiseAlertImpl();
 
 	@Test
 	public void infersBreachAsPerLimits() {
@@ -27,5 +30,10 @@ public class TypewiseAlertTest {
 		assertTrue("test", tempBreach.classifyTemperatureBreach(CoolingType.MED_ACTIVE_COOLING, 15) == BreachType.NORMAL);
 		assertTrue("test", tempBreach.classifyTemperatureBreach(CoolingType.MED_ACTIVE_COOLING, -10) == BreachType.TOO_LOW);
 	}
-
+	
+	/*
+	 * @Test public void sendAlertAsPerType() { BatteryCharacter batteryCharacter=
+	 * new BatteryCharacter(null, null); assertTrue("test",alert.checkAndAlert(null,
+	 * batteryCharacter, 0) == AlertTarget.TO_CONTROLLER); } }
+	 */
 }

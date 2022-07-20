@@ -1,6 +1,6 @@
 package sendAlert;
 
-import typewiseAlert.Constants.BreachType;
+import batteryCharacter.BreachType;
 
 public interface SendAlert {
 

@@ -1,4 +1,4 @@
-package typewiseAlert.Constants;
+package batteryCharacter;
 
 public enum CoolingType {
 
