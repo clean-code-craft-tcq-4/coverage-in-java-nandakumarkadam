@@ -5,6 +5,11 @@ import typewiseAlert.Constants.BreachType;
 import typewiseAlert.Constants.CoolingType;
 
 public class TemparetureBreachImpl implements TemparetureBreach {
+	public static void main(String[] args) {
+		TemparetureBreach ib = new TemparetureBreachImpl() ;
+		ib.inferBreach(12, 20, 30);
+	}
+
 
 	@Override
 	public BreachType inferBreach(double value, double lowerLimit, double upperLimit) {
